@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- 所有题目会在这里动态插入 -->
+
 
         <Button
             android:id="@+id/buttonSubmit"

@@ -36,7 +36,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        topic = getIntent().getStringExtra("topic");  // 从 intent 传入的主题
+        topic = getIntent().getStringExtra("topic");
 
         quizContainer = findViewById(R.id.quizContainer);
         submitButton = findViewById(R.id.buttonSubmit);

@@ -40,7 +40,7 @@ public class ResultActivity extends AppCompatActivity {
             TextView insightText = block.findViewById(R.id.textInsight);
 
             title.setText("Question " + (i + 1));
-            correctText.setText("✅ Correct Answer: " + correct);
+            correctText.setText(" Correct Answer: " + correct);
             insightText.setText(insight);
 
             resultContainer.addView(block);
@@ -51,7 +51,7 @@ public class ResultActivity extends AppCompatActivity {
         continueButton.setOnClickListener(v -> {
 
             Intent intent = new Intent(ResultActivity.this, HomeActivity.class);
-            intent.putExtra("username", getIntent().getStringExtra("username"));  // ✅ 传回原来的用户名
+            intent.putExtra("username", getIntent().getStringExtra("username"));
             startActivity(intent);
             finish();
         });
