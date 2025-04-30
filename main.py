@@ -98,7 +98,7 @@ def process_quiz(quiz_text):
         correct_ans = match[5].strip()
         insight = match[6].strip()
 
-        # ✅ 跳过模板题（防止 "[Your question here]" 被收录）
+       
         if "[Your question here]" in question or "[First option]" in options[0]:
             continue
 
@@ -110,7 +110,7 @@ def process_quiz(quiz_text):
         }
         questions.append(question_data)
 
-    # ✅ 最多返回前3道有效题目
+    
     return questions[:3]
 
 
