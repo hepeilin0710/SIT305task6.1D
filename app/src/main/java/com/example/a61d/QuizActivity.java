@@ -47,7 +47,7 @@ public class QuizActivity extends AppCompatActivity {
                 .writeTimeout(180, TimeUnit.SECONDS)
                 .build();
 
-        // 显示加载框
+        
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading quiz...");
         progressDialog.setCancelable(false);
@@ -73,7 +73,7 @@ public class QuizActivity extends AppCompatActivity {
                 userAnswers.add(selected.getText().toString());
             }
 
-            // 跳转至结果页
+            
             Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
             intent.putStringArrayListExtra("userAnswers", userAnswers);
             intent.putStringArrayListExtra("correctAnswers", correctAnswers);
@@ -149,7 +149,7 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private String getOptionText(JSONArray options, String correctAnswerRaw) {
-        // 统一处理：**OPTION B** → B → index → text
+        
         String letter = correctAnswerRaw.toUpperCase().replace("OPTION", "").replace("*", "").replace("(", "").replace(")", "").trim();
         int index = -1;
         switch (letter) {
